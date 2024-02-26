@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package pb;
+
+
+option go_package = "github.com/1said0/banka_uygulamasi/pb";
+
+message Kullanici{
+
+    string kullanici_adi=1;
+    string email=2;
+    string sifre=3;
+}

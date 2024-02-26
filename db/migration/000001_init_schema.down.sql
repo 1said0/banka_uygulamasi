@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS varlıklar;
+DROP TABLE IF EXISTS para_transferi;
+DROP TABLE IF EXISTS hesaplar;

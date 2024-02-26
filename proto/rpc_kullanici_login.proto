@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package pb;
+
+import "kullanici.proto";
+
+option go_package = "github.com/1said0/banka_uygulamasi/pb";
+
+message KullaniciLoginRequest{
+
+    string kullanici_adi=1;
+    string sifre=2;
+}
+
+message KullaniciLoginResponse{
+
+    Kullanici kullanici=1;
+
+}

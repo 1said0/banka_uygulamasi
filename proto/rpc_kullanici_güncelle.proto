@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pb;
+
+import "kullanici.proto";
+
+option go_package = "github.com/1said0/banka_uygulamasi/pb";
+
+message KullaniciGuncelleRequest {
+    string kullanici_adi = 1;
+    optional string password = 2;
+    optional string email = 3;
+}
+
+message KullaniciGuncelleResponse {
+    Kullanici kullanici = 1;
+}

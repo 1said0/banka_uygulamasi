@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package pb;
+
+import "rpc_kullanici_olustur.proto";
+
+import "rpc_kullanici_login.proto";
+
+import "rpc_kullanici_güncelle.proto";
+
+import "google/api/annotations.proto";
+option go_package = "github.com/1said0/banka_uygulamasi/pb";
+
+service BankaApp {
+    rpc KullaniciOlustur (KullaniciOlusturRequest) returns (KullaniciOlusturResponse) {
+        option (google.api.http) = {
+            post: "/v1/kullanici_olustur"
+            body: "*"
+        };
+    }
+    rpc KullaniciLogin ( KullaniciLoginRequest ) returns (KullaniciLoginResponse) {
+        option (google.api.http) = {
+            post: "/v1/kullanici_login"
+            body: "*"
+        };
+    }
+    rpc KullaniciGuncelle (KullaniciGuncelleRequest) returns (KullaniciGuncelleResponse) {
+        option (google.api.http) = {
+            patch: "/v1/kullanici_guncelle"
+            body: "*"
+        };
+    }
+}
+
